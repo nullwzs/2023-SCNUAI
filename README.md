@@ -60,7 +60,7 @@
 |TextCNN|cat1+cat2|yes|1e-3|6/10|256|50|Adam|6:2:2|(0.91/0.86)/82.58402|10cls+6cls|
 |TextCNN|cat1+cat2|yes|5e-5~1e-3|3/10|512|50|Adam|6:2:2|(0.92/0.90)/83.87502|10cls+6cls(subdivision:g2&g6)|
 |TextCNN+StructBert|cat1+cat2+JudgeAccusation|yes/yes|1e-3|3/20/10|256|50|Adam|6:2:2|(0.91/0.86/0.8205)/85.09863|10cls+6cls+2cls|
-|TextCNN+StructBert|cat1+cat2+JudgeAccusation|yes/yes|5e-5~1e-3|3/20/10|256|50|Adam|6:2:2|(0.91/0.90/0.8205)/87.90274|10cls+6cls(subdivision:g2&g6)|
+|TextCNN+StructBert|cat1+cat2+JudgeAccusation|yes/yes|5e-5~1e-3|3/20/10|512|16|Adam|6:2:2|(0.91/0.90/0.8205)/87.90274|10cls+6cls(subdivision:g2&g6)|
 |TextCNN+StructBert|category+JudgeAccusation|no/yes|5e-5~1e-3|6/10|256|50|Adam|6:2:2|(0.8537/0.8205)/87.91883|34cls+2cls|
 |TextCNN+StructBert|category+JudgeAccusation|no/yes|2e-6~5e-5|6/10|512|16|Adam|6:2:2|(0.8612/0.8205)/88.58282|34cls+2cls|
 |TextCNN+StructBert|category+JudgeAccusation|no/no|2e-6~5e-5|12/7|512|16|Adam|6:2:2|(0.8674/0.8386)/89.07108|34cls+2cls|
