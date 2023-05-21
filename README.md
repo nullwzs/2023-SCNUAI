@@ -25,7 +25,7 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 ## 数据集获取
 类案检索任务数据集使用中国民事类案检索数据集，包含15181个查询案例和总数为1518100的候选案例池，所有案例文本均来自公开的中国民事案件判决书，涉及84种类别的民事案件。数据集由若干<查询文本，候选集，类案序号>组成。比赛数据集划分为训练集、测试集和验证集，训练集共8500条数据，测试集共2181条数据，验证集共4500条数据，其中验证集的数据不包含gt_idx字段
 
-**注意：本仓库目录下 ./data/wenshu_ms_dataset/dev 文件夹下的数据用于展示，并不完整。完整数据获取请参见下方链接**
+**注意：本仓库目录下 ./data/wenshu_ms_dataset/dev 文件夹下的数据用于展示，并不完整。完整数据获取请参见下方链接：**
 https://aistudio.baidu.com/aistudio/datasetdetail/205651
 
 ## 解决方案大致思路
@@ -35,7 +35,6 @@ https://aistudio.baidu.com/aistudio/datasetdetail/205651
 * 在训练过程中采用Adam优化器，每训练一个batch都计算相应训练集和测试集的准确率，采取交叉熵损失函数，并实时对比训练过程loss的梯度下降过程，不断调整学习率等模型参数
 
 TextCNN 模型的示意图如下：
-
 
 2. 我们探索数据发现，每个query下的候选案例ctxs的前一部分的category属性相同，但它们中的一部分不在类似案件gt_idx的列表当中。因此，我们根据它们是否在gt_idx列表当中，构建基于阿里云改进的StructBert的文本相似二分类模型，用于在category相同的候选案例中筛选在当前query下的类似案例gt_idx。实践证明，这一步可让结果提升大约4个百分点。尽管有不小的提升，但存在着以下改进空间：
 * 对于StructBert模型的训练集构建，我们只采用了一个字段来构建，即JudgeAccusation. 一方面，该字段的特征信息在TextCNN模型下已被大量学习了，因此在StructBert模型中选取除JudgeAccusation以外别的特征效果可能更明显；另一方面，可以采取多个字段相辅的方式来构造训练集，这也是一个很大的改进空间，也是本团队没有得到更好名次的原因之一。
