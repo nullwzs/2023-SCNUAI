@@ -28,6 +28,16 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 **注意：本仓库目录下 ./data/wenshu_ms_dataset/dev 文件夹下的数据用于展示，并不完整。完整数据获取请参见下方链接：**
 https://aistudio.baidu.com/aistudio/datasetdetail/205651
 
+**注意：基于Bert的TextCNN模型和StructBert模型的训练集由于文件太大，在本仓库中并未上传，有需要者可自行运行data_process文件夹中脚本文件获取，或从以下网盘链接的方式获取：**
+**TextCNN 训练集数据**
+链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 
+提取码：scnu 
+
+**StructBert 训练集数据**
+链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 
+提取码：scnu 
+
+
 ## 解决方案大致思路
 1. 根据JudgeAccusation字段的法律文案作为训练样本，以category下的cat1和cat2字段作为训练标签，构建TextCNN文本多分类模型。同时，为了提高预测的准确率，我们做了以下改进：
 * 在TextCNN模型中的嵌入层，由原来的随机Embedding构造词向量，改进为基于Transformer的Bert预训练模型下的词向量转换
@@ -42,6 +52,19 @@ TextCNN 模型的示意图如下：
 StructBert 模型的示意图如下：
 
 
+## 实现平台
+1. 对于TextCNN模型，本团队在本地构建模型代码，并上传至**Kaggle平台**，进行GPU加速训练，一共训练了30个epoch，34类标签在测试集上的平均准确率为 0.86
+2. 对于StructBert模型，本团队在阿里云的ModelScope平台实现，共训练了7个epoch，二分类标签在测试集上的准确率为 0.8386
+
+## 参考文献
+@article{wang2019structbert,
+  title={Structbert: Incorporating language structures into pre-training for deep language understanding},
+  author={Wang, Wei and Bi, Bin and Yan, Ming and Wu, Chen and Bao, Zuyi and Xia, Jiangnan and Peng, Liwei and Si, Luo},
+  journal={arXiv preprint arXiv:1908.04577},
+  year={2019}
+}
+
+## 文件目录
 
 
 
