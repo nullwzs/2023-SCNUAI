@@ -40,6 +40,8 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 
 - **StructBert 训练集数据** -> 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 提取码：scnu 
 
+- **训练模型pth文件** -> 链接：https://pan.baidu.com/s/13lRI44VRRT475pCABZuZVQ?pwd=scnu 提取码：scnu 
+
 <br>
 
 ## 解决方案大致思路
