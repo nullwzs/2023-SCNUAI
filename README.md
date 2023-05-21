@@ -32,9 +32,9 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 
 2. 基于Bert的TextCNN模型和StructBert模型的训练集由于文件太大，在本仓库中并未上传，有需要者可自行运行data_process文件夹中脚本文件获取，或从以下网盘链接的方式获取：
 
-- **TextCNN 训练集数据** 链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 提取码：scnu 
+- **TextCNN 训练集数据** --> 链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 提取码：scnu 
 
-- **StructBert 训练集数据** 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 提取码：scnu 
+- **StructBert 训练集数据** --> 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 提取码：scnu 
 
 ## 解决方案大致思路
 1. 根据JudgeAccusation字段的法律文案作为训练样本，以category下的cat1和cat2字段作为训练标签，构建TextCNN文本多分类模型。同时，为了提高预测的准确率，我们做了以下改进：
