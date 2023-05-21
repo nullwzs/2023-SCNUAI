@@ -54,7 +54,7 @@
 
 ## 实验结果
 |Model|Attribute|is_split|Learning_rate|Epoch|Filter_nums|Batch_size|Optimizer|Train:Test:Dev|Accurancy(Test/NDCG@30)|Note|
-|:---:|:-------:|:------:|:-----------:|:---:|:---------:|:--------:|:-------:|:------------:|:---------------------:|:---|
+|:---:|:-------:|:------:|:-----------:|:---:|:---------:|:--------:|:-------:|:------------:|:---------------------:|:---:|
 |bm25(Baseline)|None|None|None|None|None|None|None|None|None/59.93|None|
 |TextCNN|cat1|no|1e-3|6/10|256|50|Adam|6:2:2|0.91/58.70538|10cls|
 |TextCNN|cat1+cat2|yes|1e-3|6/10|256|50|Adam|6:2:2|(0.91/0.86)/82.58402|10cls+6cls|
