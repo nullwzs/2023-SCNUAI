@@ -29,11 +29,14 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 https://aistudio.baidu.com/aistudio/datasetdetail/205651
 
 **注意：基于Bert的TextCNN模型和StructBert模型的训练集由于文件太大，在本仓库中并未上传，有需要者可自行运行data_process文件夹中脚本文件获取，或从以下网盘链接的方式获取：**
+
 **TextCNN 训练集数据**
+
 链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 
 提取码：scnu 
 
 **StructBert 训练集数据**
+
 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 
 提取码：scnu 
 
@@ -46,11 +49,14 @@ https://aistudio.baidu.com/aistudio/datasetdetail/205651
 
 TextCNN 模型的示意图如下：
 
+![TextCNN](./TextCNN-classifier/TextCNN-model.png)
+
 2. 我们探索数据发现，每个query下的候选案例ctxs的前一部分的category属性相同，但它们中的一部分不在类似案件gt_idx的列表当中。因此，我们根据它们是否在gt_idx列表当中，构建基于阿里云改进的StructBert的文本相似二分类模型，用于在category相同的候选案例中筛选在当前query下的类似案例gt_idx。实践证明，这一步可让结果提升大约4个百分点。尽管有不小的提升，但存在着以下改进空间：
 * 对于StructBert模型的训练集构建，我们只采用了一个字段来构建，即JudgeAccusation. 一方面，该字段的特征信息在TextCNN模型下已被大量学习了，因此在StructBert模型中选取除JudgeAccusation以外别的特征效果可能更明显；另一方面，可以采取多个字段相辅的方式来构造训练集，这也是一个很大的改进空间，也是本团队没有得到更好名次的原因之一。
 
 StructBert 模型的示意图如下：
 
+![TextCNN](./StructBert-classifier/StructBert-Model.png)
 
 ## 实现平台
 1. 对于TextCNN模型，本团队在本地构建模型代码，并上传至**Kaggle平台**，进行GPU加速训练，一共训练了30个epoch，34类标签在测试集上的平均准确率为 0.86
@@ -66,5 +72,21 @@ StructBert 模型的示意图如下：
 
 ## 文件目录
 
-
+```
+├─.ipynb_checkpoints
+├─data
+│  └─wenshu_ms_dataset
+│      └─dev
+├─data_process
+│  └─.ipynb_checkpoints
+├─result
+├─StructBert-classifier
+│  ├─.ipynb_checkpoints
+│  └─workspace
+│      ├─output
+│      └─tmp
+└─TextCNN-classifier
+    ├─.ipynb_checkpoints
+    └─models
+```
 
