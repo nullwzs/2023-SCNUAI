@@ -52,6 +52,21 @@
 1. 对于TextCNN模型，本团队在本地构建模型代码，并上传至**Kaggle平台**，进行GPU加速训练，一共训练了30个epoch，34类标签在测试集上的平均准确率为 0.86
 2. 对于StructBert模型，本团队在阿里云的**ModelScope平台**实现，共训练了7个epoch，二分类标签在测试集上的准确率为 0.8386
 
+## 实验结果
+|Model|Attribute|is_split|Learning_rate|Epoch|Filter_nums|Batch_size|Optimizer|Train:Test:Dev|Accurancy(Test/NDCG@30)|Note|
+|:---:|:-------:|:------:|:-----------:|:---:|:---------:|:--------:|:-------:|:------------:|:---------------------:|:---|
+|Baseline|None|None|None|None|None|None|None/59.93|None|
+|TextCNN|cat1|no|1e-3|6|256|50|Adam|6:2:2|0.91/58.70538|10cls|
+|TextCNN|cat1+cat2|yes|1e-3|6|256|50|Adam|6:2:2|(0.91/0.86)/82.58402|10cls+6cls|
+|TextCNN|cat1+cat2|yes|5e-5~1e-3|3|512|50|Adam|6:2:2|(0.92/0.90)/83.87502|10cls+6cls(subdivision:g2&g6)|
+|TextCNN+StructBert|cat1+cat2+JudgeAccusation|yes/yes|1e-3|3/10|256|50|Adam|6:2:2|(0.91/0.86/0.8205)/85.09863|10cls+6cls+2cls|
+|TextCNN+StructBert|category+JudgeAccusation|no/yes|5e-5~1e-3|6/10|256|50|Adam|6:2:2|(0.8537/0.8205)/87.90274|34cls+2cls|
+|TextCNN+StructBert|category+JudgeAccusation|no/yes|2e-6~5e-5|6/10|512|16|Adam|6:2:2|(0.8612/0.8205)/88.58282|34cls+2cls|
+|TextCNN+StructBert|category+JudgeAccusation|no/no|2e-6~5e-5|12/7|512|16|Adam|6:2:2|(0.8674/0.8386)/89.07108|34cls+2cls|
+|TextCNN+StructBert|category+JudgeAccusation|no/no|2e-6~5e-5|30/7|512|16|Adam|6:2:2|(0.8693/0.8386)/89.25334|34cls+2cls|
+
+
+
 ## 参考文献
 ```
 @article{wang2019structbert,
