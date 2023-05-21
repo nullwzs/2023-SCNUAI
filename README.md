@@ -1,5 +1,5 @@
 # 2023-SCNUAI-contest
-第四届华南师大人工智能算法挑战赛 第八名解决方案
+第四届华南师大人工智能算法挑战赛-第八名(SCNU_米奇妙妙屋)解决方案
 =====
 
 ## 比赛内容
@@ -63,12 +63,14 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 2. 对于StructBert模型，本团队在阿里云的**ModelScope平台**实现，共训练了7个epoch，二分类标签在测试集上的准确率为 0.8386
 
 ## 参考文献
+```
 @article{wang2019structbert,
   title={Structbert: Incorporating language structures into pre-training for deep language understanding},
   author={Wang, Wei and Bi, Bin and Yan, Ming and Wu, Chen and Bao, Zuyi and Xia, Jiangnan and Peng, Liwei and Si, Luo},
   journal={arXiv preprint arXiv:1908.04577},
   year={2019}
 }
+```
 
 ## 文件目录
 
