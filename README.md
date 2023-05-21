@@ -38,7 +38,7 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 
 ## 解决方案大致思路
 
-### 一、基于TextCNN的文本多分类模型
+### 一、基于 TextCNN 的文本多分类模型
 根据JudgeAccusation字段的法律文案作为训练样本，以category下的cat1和cat2字段作为训练标签，构建TextCNN文本多分类模型。同时，为了提高预测的准确率，我们做了以下改进：
 * 在TextCNN模型中的嵌入层，由原来的随机Embedding构造词向量，改进为基于Transformer的Bert预训练模型下的词向量转换
 * 最长文本长度设置为512，该长度适用于所给数据集下的大部分法律文案，并前后比较截取方式对准确率的影响，采取了以两头向中间截取的方式，剔除前后杂余的无效信息
@@ -49,7 +49,7 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 ![TextCNN](./TextCNN-classifier/TextCNN-model.png)
 
 
-### 二、StructBert文本相似度二分类模型
+### 二、StructBert 文本相似度二分类模型
 我们探索数据发现，每个query下的候选案例ctxs的前一部分的category属性相同，但它们中的一部分不在类似案件gt_idx的列表当中。因此，我们根据它们是否在gt_idx列表当中，构建基于阿里云改进的StructBert的文本相似二分类模型，用于在category相同的候选案例中筛选在当前query下的类似案例gt_idx。实践证明，这一步可让结果提升大约4个百分点。尽管有不小的提升，但存在着以下改进空间：
 * 对于StructBert模型的训练集构建，我们只采用了一个字段来构建，即JudgeAccusation. 一方面，该字段的特征信息在TextCNN模型下已被大量学习了，因此在StructBert模型中选取除JudgeAccusation以外别的特征效果可能更明显；另一方面，可以采取多个字段相辅的方式来构造训练集，这也是一个很大的改进空间，也是本团队没有得到更好名次的原因之一。
 
