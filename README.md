@@ -56,9 +56,9 @@
 |Model|Attribute|is_split|Learning_rate|Epoch|Filter_nums|Batch_size|Optimizer|Train:Test:Dev|Accurancy(Test/NDCG@30)|Note|
 |:---:|:-------:|:------:|:-----------:|:---:|:---------:|:--------:|:-------:|:------------:|:---------------------:|:---|
 |bm25(Baseline)|None|None|None|None|None|None|None|None|None/59.93|None|
-|TextCNN|cat1|no|1e-3|6|256|50|Adam|6:2:2|0.91/58.70538|10cls|
-|TextCNN|cat1+cat2|yes|1e-3|6|256|50|Adam|6:2:2|(0.91/0.86)/82.58402|10cls+6cls|
-|TextCNN|cat1+cat2|yes|5e-5~1e-3|3|512|50|Adam|6:2:2|(0.92/0.90)/83.87502|10cls+6cls(subdivision:g2&g6)|
+|TextCNN|cat1|no|1e-3|6/10|256|50|Adam|6:2:2|0.91/58.70538|10cls|
+|TextCNN|cat1+cat2|yes|1e-3|6/10|256|50|Adam|6:2:2|(0.91/0.86)/82.58402|10cls+6cls|
+|TextCNN|cat1+cat2|yes|5e-5~1e-3|3/10|512|50|Adam|6:2:2|(0.92/0.90)/83.87502|10cls+6cls(subdivision:g2&g6)|
 |TextCNN+StructBert|cat1+cat2+JudgeAccusation|yes/yes|1e-3|3/20/10|256|50|Adam|6:2:2|(0.91/0.86/0.8205)/85.09863|10cls+6cls+2cls|
 |TextCNN+StructBert|cat1+cat2+JudgeAccusation|yes/yes|5e-5~1e-3|3/20/10|256|50|Adam|6:2:2|(0.91/0.90/0.8205)/87.90274|10cls+6cls(subdivision:g2&g6)|
 |TextCNN+StructBert|category+JudgeAccusation|no/yes|5e-5~1e-3|6/10|256|50|Adam|6:2:2|(0.8537/0.8205)/87.91883|34cls+2cls|
