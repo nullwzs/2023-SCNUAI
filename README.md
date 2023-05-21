@@ -24,10 +24,7 @@
 
 &emsp;&emsp;题目：**法律类案检索**
 
-&emsp;&emsp;比赛网址：
-
-https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction 
-
+&emsp;&emsp;比赛网址：https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction 
 
 &emsp;&emsp;类案检索作为人工智能支持司法审判的重要内容，对于提升法院整体裁判水平、实现类案适法统一、促进司法公正有极其重要的积极意义。
 
