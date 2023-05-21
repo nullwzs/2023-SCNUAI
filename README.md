@@ -62,7 +62,7 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 
 **StructBert 模型的示意图如下：**
 
-![TextCNN](./StructBert-classifier/StructBert-Model.png)
+![StructBert](./StructBert-classifier/StructBert-Model.png)
 
 ## 实现平台
 1. 对于TextCNN模型，本团队在本地构建模型代码，并上传至**Kaggle平台**，进行GPU加速训练，一共训练了30个epoch，34类标签在测试集上的平均准确率为 0.86
