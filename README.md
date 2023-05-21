@@ -6,6 +6,19 @@
 
 最终得分：89.25334
 
+## 使用注意事项
+1. 本仓库目录下 ./data/wenshu_ms_dataset/dev 文件夹下的数据用于展示，并不完整。完整数据参见上方链接。
+
+2. 基于Bert的TextCNN模型和StructBert模型的训练集由于文件太大，在本仓库中并未上传，有需要者可自行运行data_process文件夹中脚本文件获取，或从以下网盘链接的方式获取：
+
+- **TextCNN 训练集数据** -> 链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 提取码：scnu 
+
+- **StructBert 训练集数据** -> 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 提取码：scnu 
+
+- **训练模型pth文件** -> 链接：https://pan.baidu.com/s/13lRI44VRRT475pCABZuZVQ?pwd=scnu 提取码：scnu 
+
+<br>
+
 ## 赛题说明
 ### 比赛内容
 
@@ -31,19 +44,6 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 类案检索任务数据集使用中国民事类案检索数据集，包含15181个查询案例和总数为1518100的候选案例池，所有案例文本均来自公开的中国民事案件判决书，涉及84种类别的民事案件。数据集由若干<查询文本，候选集，类案序号>组成。比赛数据集划分为训练集、测试集和验证集，训练集共8500条数据，测试集共2181条数据，验证集共4500条数据，其中验证集的数据不包含gt_idx字段。
 
 **完整数据获取请参见下方链接：https://aistudio.baidu.com/aistudio/datasetdetail/205651**
-
-<br>
-
-## 注意事项
-1. 本仓库目录下 ./data/wenshu_ms_dataset/dev 文件夹下的数据用于展示，并不完整。完整数据参见上方链接。
-
-2. 基于Bert的TextCNN模型和StructBert模型的训练集由于文件太大，在本仓库中并未上传，有需要者可自行运行data_process文件夹中脚本文件获取，或从以下网盘链接的方式获取：
-
-- **TextCNN 训练集数据** -> 链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 提取码：scnu 
-
-- **StructBert 训练集数据** -> 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu 提取码：scnu 
-
-- **训练模型pth文件** -> 链接：https://pan.baidu.com/s/13lRI44VRRT475pCABZuZVQ?pwd=scnu 提取码：scnu 
 
 <br>
 
