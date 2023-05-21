@@ -27,18 +27,18 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 
 **完整数据获取请参见下方链接：https://aistudio.baidu.com/aistudio/datasetdetail/205651**
 
-# 注意事项
+## 注意事项
 1. 本仓库目录下 ./data/wenshu_ms_dataset/dev 文件夹下的数据用于展示，并不完整。完整数据参见上方链接。
 
 2. 基于Bert的TextCNN模型和StructBert模型的训练集由于文件太大，在本仓库中并未上传，有需要者可自行运行data_process文件夹中脚本文件获取，或从以下网盘链接的方式获取：
 
-**TextCNN 训练集数据**
+- **TextCNN 训练集数据**
 
 链接：https://pan.baidu.com/s/1-tWrbI4kquUhWIKM70wmVQ?pwd=scnu 
 
 提取码：scnu 
 
-**StructBert 训练集数据**
+- **StructBert 训练集数据**
 
 链接：https://pan.baidu.com/s/1jyQH5HMf08e4R-aLzklbgg?pwd=scnu
 
