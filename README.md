@@ -1,7 +1,4 @@
 # 2023-SCNUAI-contest
-HEAD
-第四届华南师大人工智能算法挑战赛 第八名解决方案
-=======
 
 第四届华南师大人工智能算法挑战赛 第八名解决方案
 
@@ -31,4 +28,4 @@ https://aistudio.baidu.com/aistudio/competition/detail/899/0/introduction
 
 
 
->>>>>>> e6f9bb6 (SCNUAI-git-v1)
+
