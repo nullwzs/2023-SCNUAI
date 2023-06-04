@@ -60,7 +60,7 @@
 
 **TextCNN 模型的示意图如下：**
 
-![TextCNN](./TextCNN-classifier/TextCNN-model-v2.png)
+![TextCNN](./TextCNN-classifier/TextCNN-v2.png)
 
 ### 二、StructBert 文本相似度二分类模型
 
